@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chia sẻ Thiệp Mời Cưới</title>
+</head>
+<body>
+    <h1>Nhập tên để tạo link thiệp mời</h1>
+    <input type="text" id="nameInput" placeholder="Nhập tên của bạn">
+    <select id="houseSelect">
+        <option value="2">Nhà trai</option>
+        <option value="1">Nhà gái</option>
+    </select>
+    <button onclick="generateLink()">Tạo Link</button>
+    <p id="link"></p>
+
+    <script>
+        function generateLink() {
+            const name = document.getElementById("nameInput").value;
+            const encodedName = encodeURIComponent(name);
+            const houseType =document.getElementById("houseSelect").value;
+            const link = `https://comfy-daffodil-90234d.netlify.app/.netlify/functions/meta?name=${encodedName}&type=${houseType}`;
+            document.getElementById("link").innerHTML = `<a href="${link}" target="_blank">${link}</a>`;
+        }
+    </script>
+</body>
+</html>
