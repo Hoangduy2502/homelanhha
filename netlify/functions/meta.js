@@ -23,7 +23,7 @@ exports.handler = async (event) => {
             <meta property="og:title" content="Kính mời - ${name}">
             <meta property="og:image" content="https://res.cloudinary.com/dwbo7yhs1/image/upload/v1741097916/zqrndycqeriayvzl7rkt.jpg">
             <meta property="og:description" content="Chúng tôi rất vui mừng khi sắp bước sang một chương mới của cuộc đời. Sự hiện diện của quý khách trong ngày trọng đại này sẽ là niềm vinh hạnh lớn đối với vợ chồng tôi. Rất mong quý khách sắp xếp thời gian đến chung vui và chúc phúc cùng gia đình tôi. Xin cảm ơn mọi người rất nhiều!">
-            <meta property="og:url" content="https://comfy-daffodil-90234d.netlify.app/.netlify/functions/meta?name=${encodeURIComponent(name)}&type=${encodeURIComponent(type)}">
+            <meta property="og:url" content="https://thiepcuoilanhha.netlify.app/.netlify/functions/meta?name=${encodeURIComponent(name)}&type=${encodeURIComponent(type)}">
             <title>❤️❤️❤️ Thiệp cưới Lành & Hà ❤️❤️❤️</title>
     <style>
         body {
