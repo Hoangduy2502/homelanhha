@@ -18,6 +18,11 @@
     <script>
         function generateLink() {
             const name = document.getElementById("nameInput").value;
+            const xungho = document.getElementById("xungho").value;
+            var xunghochu = "mình";
+            if(xungho == "chị" || xungho=="anh"){
+                xunghochu="em";
+            }
             const encodedName = encodeURIComponent(name);
             const houseType =document.getElementById("houseSelect").value;
             const link = `https://thiepcuoilanhha.netlify.app/.netlify/functions/meta?name=${encodedName}&type=${houseType}`;
