@@ -11,9 +11,10 @@
         <option value="2">Nhà trai</option>
         <option value="1">Nhà gái</option>
     </select>
+    <input type="text" id="xungho" placeholder="Nhập xư hô">
     <button onclick="generateLink()">Tạo Link</button>
     <p id="link"></p>
-
+    <p id="content"></p>
     <script>
         function generateLink() {
             const name = document.getElementById("nameInput").value;
@@ -21,7 +22,28 @@
             const houseType =document.getElementById("houseSelect").value;
             const link = `https://thiepcuoilanhha.netlify.app/.netlify/functions/meta?name=${encodedName}&type=${houseType}`;
             document.getElementById("link").innerHTML = `<a href="${link}" target="_blank">${link}</a>`;
+
+            var thoigian = "09/3 – 10/3 ( tức ngày 10/2 – 11/2 âm lịch)";
+            var houre = "17:00 chiều ngày 09/3 và 10:00 sáng 10/3";
+            if(houseType==2){
+                thoigian =  "10/3 – 11/3 ( tức ngày 11/2 – 12/2 âm lịch)"
+                houre = "17:00 chiều ngày 10/3 và 11:00 sáng 11/3"
+            }
+            var content =`
+            Thân gửi ${name}
+            Trước hết ${xunghochu} xin lỗi vì không thể gặp trực tiếp để trao thiệp mời tận tay ${xungho}!
+            ${xunghochu} vô cùng hạnh phúc khi thông báo đến ${xungho} rằng vào ngày ${thoigian}, 
+            bố mẹ  ${xunghochu} lập gia đình cho  ${xunghochu}, 
+            thân mời ${xungho} cùng người thương đến dự bữa cơm thân mật với gia đình  ${xunghochu} vào ${houre}. 
+            Sự hiện diện của ${xungho} không chỉ niềm vinh dự mà còn làm cho ngày vui của  ${xunghochu} thêm trọn vẹn và ý nghĩa. 
+            Rất mong ${xungho} có mặt trong ngày vui của  ${xunghochu} ♥️
+            
+            `
+            document.getElementById("content").innerHTML =content;
         }
+
+
+
     </script>
 </body>
 </html>
